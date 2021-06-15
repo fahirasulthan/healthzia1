@@ -1,6 +1,11 @@
-import React from "react";
 import React, { useState } from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableWithoutFeedback,
+} from "react-native";
 
 export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState("");
