@@ -1,11 +1,14 @@
-import React from "react";
+import * as React from "react";
 import { StyleSheet, Text, View, Image, Button } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
-import LogInScreen from "./Screens/LogInScreen";
-import HomeScreen from "./Screens/HomeScreen";
+import QRCodeScannerScreen from "./QRCodeScannerScreen";
+import AppointmentBookingScreen from "./AppointmentBookingScreen";
+import MedCollectionScreen from "./MedCollectionScreen";
+import SettingsScreen from "./SettingsScreen";
 
-function StartScreen({ navigation }) {
+function More({ navigation }) {
   return (
     <View style={styles.container}>
       <Image
@@ -16,8 +19,8 @@ function StartScreen({ navigation }) {
       />
       <Button
         style={styles.Button}
-        title="LogIn page"
-        onPress={() => navigation.navigate("Log-In Page")}
+        title="TraceTogether QR Code Scanner"
+        onPress={() => navigation.navigate("QR Code Scanner")}
       />
     </View>
   );
@@ -28,11 +31,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#ECF3DD",
     alignItems: "center",
-    justifyContent: "center",
   },
   image: {
-    width: 200,
-    height: 200,
+    width: 50,
+    height: 50,
   },
   Button: {
     backgroundColor: "red",
@@ -43,12 +45,10 @@ const Stack = createStackNavigator();
 
 function App() {
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="App">
-        <Stack.Screen name="Welcome" component={StartScreen} />
-        <Stack.Screen name="Log-In Page" component={LogInScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Stack.Navigator initialRouteName="App">
+      <Stack.Screen name="More" component={More} />
+      <Stack.Screen name="QR Code Scanner" component={QRCodeScannerScreen} />
+    </Stack.Navigator>
   );
 }
 

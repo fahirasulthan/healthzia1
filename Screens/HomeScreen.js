@@ -1,6 +1,8 @@
 import * as React from "react";
-import { Text, View, StyleSheet, Image } from "react-native";
+import { StyleSheet, Text, View, Image, Button } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import More from "./MoreScreen";
 
 function HomeScreen() {
   return (
@@ -12,16 +14,16 @@ function HomeScreen() {
         }}
       />
       <Text style={styles.DA}>Daily Announcements</Text>
+      <View style={styles.titleContainer}>
+        <Text style={styles.title}>TODAY - 16 JUN</Text>
+        <Text style={styles.text}>19 confirmed community cases</Text>
+        <Text style={styles.text}>5 imported cases - placed on SHN</Text>
+        <Text style={styles.title}>YESTERDAY - 15 JUN</Text>
+        <Text style={styles.text}>14 confirmed community cases</Text>
+        <Text style={styles.text}>0 imported cases</Text>
+      </View>
       <Text style={styles.SC}>Shortcuts</Text>
       <View style={styles.fillerContainer}></View>
-    </View>
-  );
-}
-
-function More() {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Settings!</Text>
     </View>
   );
 }
@@ -31,7 +33,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#ECF3DD",
     alignItems: "center",
-    justifyContent: "",
   },
   image: {
     width: 50,
@@ -39,13 +40,26 @@ const styles = StyleSheet.create({
   },
   DA: {
     textDecorationLine: "underline",
-    backgroundColor: "white",
     marginTop: 7,
-    fontSize: 13.8,
+    marginBottom: 3,
+    fontSize: 20,
+  },
+  titleContainer: {
+    backgroundColor: "white",
     paddingTop: 5,
-    paddingBottom: 300,
-    paddingLeft: 100,
-    paddingRight: 100,
+    paddingBottom: 50,
+    paddingLeft: 250,
+    paddingRight: 250,
+  },
+  title: {
+    marginLeft: -150,
+    fontWeight: "Bold",
+    fontSize: 20,
+  },
+  text: {
+    marginTop: 5,
+    marginLeft: -130,
+    fontSize: 15,
   },
   SC: {
     textDecorationLine: "underline",
@@ -64,14 +78,11 @@ const styles = StyleSheet.create({
 
 const Tab = createBottomTabNavigator();
 
-function MyTabs() {
+export default function MyTabs() {
   return (
     <Tab.Navigator>
       <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Settings" component={More} />
+      <Tab.Screen name="More" component={More} />
     </Tab.Navigator>
   );
-}
-export default function App() {
-  return <MyTabs />;
 }

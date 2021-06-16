@@ -1,16 +1,7 @@
-import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import React, { useState } from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  TextInput,
-  Image,
-  Button,
-  TouchableOpacity,
-} from "react-native";
-import HomeScreen from "C:/Users/fahir/Desktop/healthzia/Screens/HomeScreen";
+import { StyleSheet, Text, View, TextInput, Button } from "react-native";
+import HomeScreen from "./HomeScreen";
 
 function HomeScreen1({ navigation }) {
   return (
@@ -39,7 +30,7 @@ function HomeScreen1({ navigation }) {
         onPress={() => navigation.navigate("Forget Password")}
       />
 
-      <Button title="LOGIN" onPress={() => navigation.navigate("LOGIN")} />
+      <Button title="LOGIN" onPress={() => navigation.navigate("Homescreen")} />
     </View>
   );
 }
@@ -142,39 +133,9 @@ const Stack = createStackNavigator();
 function App() {
   return (
     <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen
-        name="Login"
-        component={HomeScreen1}
-        options={{
-          title: "",
-          headerStyle: {
-            backgroundColor: "#fff",
-          },
-          headerTintColor: "#000",
-        }}
-      />
-      <Stack.Screen
-        name="Forget Password"
-        component={DetailsScreen}
-        options={{
-          title: "Forget Password",
-          headerStyle: {
-            backgroundColor: "#fff",
-          },
-          headerTintColor: "#000",
-        }}
-      />
-      <Stack.Screen
-        name="LOGIN"
-        component={HomeScreen}
-        options={{
-          title: "LOGIN",
-          headerStyle: {
-            backgroundColor: "#fff",
-          },
-          headerTintColor: "#000",
-        }}
-      />
+      <Stack.Screen name="Login" component={HomeScreen1} />
+      <Stack.Screen name="Forget Password" component={DetailsScreen} />
+      <Stack.Screen name="Homescreen" component={HomeScreen} />
     </Stack.Navigator>
   );
 }

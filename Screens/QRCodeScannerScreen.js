@@ -1,18 +1,30 @@
-import React from "react";
-import { StyleSheet, Text, View, Image } from "react-native";
-import React, { useState } from "react";
 import React, { useState } from "react";
 import {
-  SafeAreaView,
   StyleSheet,
-  ScrollView,
-  View,
   Text,
+  View,
+  Image,
+  SafeAreaView,
+  ScrollView,
   StatusBar,
   TouchableOpacity,
   Button,
 } from "react-native";
 
-import { Header, Colors } from "react-native/Libraries/NewAppScreen";
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text>Open up App.js to start working on your app!</Text>
+      <StatusBar style="auto" />
+    </View>
+  );
+}
 
-import QRCodeScanner from "react-native-qrcode-scanner";
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#ECF3DD",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
