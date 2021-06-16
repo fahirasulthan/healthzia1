@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   text: {
     fontWeight: "bold",
     fontSize: 30,
-    textAlign: "top",
+    textAlign: "left",
     color: "black",
   },
   image: {

@@ -3,7 +3,6 @@ import { StyleSheet, Text, View, Image, Button } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import LogInScreen from "./Screens/LogInScreen";
-import HomeScreen from "./Screens/HomeScreen";
 
 function StartScreen({ navigation }) {
   return (
