@@ -46,7 +46,7 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="App">
         <Stack.Screen name="Welcome" component={StartScreen} />
-        <Stack.Screen name="Log-In Page" component={LoginScreen} />
+        <Stack.Screen name="Log-In Page" component={LogInScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
