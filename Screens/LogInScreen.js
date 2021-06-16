@@ -9,7 +9,7 @@ function HomeScreen1({ navigation }) {
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
-          placeholder="SingPass"
+          placeholder="NRIC"
           placeholderTextColor="#3D3A30"
           onChangeText={(nric) => setNRIC(nric)}
         />
@@ -41,7 +41,7 @@ function DetailsScreen() {
       <View style={styles.inputView}>
         <TextInput
           style={styles.TextInput}
-          placeholder="SingPass"
+          placeholder="NRIC"
           placeholderTextColor="#3D3A30"
           onChangeText={(nric) => setNRIC(nric)}
         />
