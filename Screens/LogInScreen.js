@@ -78,7 +78,7 @@ function DetailsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#",
+    backgroundColor: "#ECF3DD",
     alignItems: "center",
     justifyContent: "center",
   },

@@ -50,16 +50,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: StatusBar.currentHeight,
-    marginHorizontal: 16,
+    backgroundColor: "#ECF3DD",
   },
   item: {
-    backgroundColor: "#00FF00",
+    backgroundColor: "#E2FFDB",
     padding: 20,
     marginVertical: 8,
   },
   header: {
     fontSize: 32,
-    backgroundColor: "#fff",
+    backgroundColor: "#ECF3DD",
   },
   title: {
     fontSize: 20,

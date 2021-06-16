@@ -3,12 +3,16 @@ import { StyleSheet, Text, View, Image } from "react-native";
 
 export default function AppointmentBookingScreen() {
   return (
-    <View style={styles.fillerContainer}>
-      <View style={styles.titleContainer}>
-        <Text style={styles.text}>Appoinment Booking</Text>
-        <Image style={styles.image} source={{ uri: "" }} />
-      </View>
-      <View style={styles.fillerContainer}></View>
+    <View style={styles.container}>
+      <Image
+        style={styles.image}
+        source={{
+          uri: "https://i.pinimg.com/236x/a8/6e/55/a86e55f50e63b73c8a28dfa5aa40defb.jpg",
+        }}
+      />
+      <Text style={styles.text}>Appoinment Booking</Text>
+
+      <View style={styles.titleContainer}></View>
     </View>
   );
 }
@@ -16,25 +20,20 @@ export default function AppointmentBookingScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "rgb(236, 243, 221)",
+    backgroundColor: "#ECF3DD",
   },
   titleContainer: {
-    backgroundColor: "rgb(226, 255, 219)",
-    padding: 0,
-    margin: 0,
+    backgroundColor: "#fff",
+    padding: 5,
+    margin: 10,
   },
   text: {
     fontWeight: "bold",
     fontSize: 30,
-    textAlign: "left",
-    color: "black",
   },
   image: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-    marginTop: 40,
+    width: 50,
+    height: 50,
   },
 });
